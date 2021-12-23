@@ -1,0 +1,17 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "quasarv2tiahold",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "vue",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist/spa",
+      "BuildCommand": "npx quasar build",
+      "StartCommand": "npx quasar dev"
+    }
+  }
+}
