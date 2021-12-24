@@ -54,6 +54,7 @@ export const schema = {
                         "rules": [
                             {
                                 "allow": "public",
+                                "provider": "iam",
                                 "operations": [
                                     "create",
                                     "update",

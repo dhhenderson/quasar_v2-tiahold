@@ -47,7 +47,10 @@ export default defineComponent({
   },
   methods: {
     async getFavorites() {
-      const favorites = await API.graphql(graphqlOperation(listFavorites));
+      //const favorites = await API.graphql(graphqlOperation(listFavorites));
+      const favorites = await API.graphql({
+        query: listFavorites,
+        authMode: 'AWS_IAM'});
       this.favorites = favorites.data.listFavorites.items;
     }
   }
