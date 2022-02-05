@@ -7,7 +7,7 @@
       >
         Links
       </q-item-label>
-      <q-item v-for="item in favorites" :key="item.id"
+      <q-item v-for="item in favorites.sort((a,b)=> a.id - b.id)" :key="item.id"
         clickable
         tag="a"
         target="_blank"
