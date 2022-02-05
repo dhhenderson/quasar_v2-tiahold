@@ -1,19 +1,14 @@
 <template>
   <q-page class="column">
 
-    <q-list dense class="row items-baseline">
-      <q-item-label
-        header
-      >
-        Links
-      </q-item-label>
-      <q-item v-for="item in favorites.sort((a,b)=> a.id - b.id)" :key="item.id"
+    <q-list class="row">
+      <q-item dense v-for="item in favorites.sort((a,b)=> a.id - b.id)" :key="item.id"
         clickable
         tag="a"
         target="_blank"
         :href="item.url"
       >
-        <p>{{ item.name }}</p>
+        {{ item.name }}
       </q-item>
     </q-list>
 
